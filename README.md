@@ -11,11 +11,22 @@ The public endpoint is:
 https://raw.githubusercontent.com/TheBoredTeam/boring.extensions/main/catalog.plist
 ```
 
-This repository contains listing data and catalog tooling, not extension source
-or customer purchases. Publishers build, sign, notarize, and distribute their
-own `.bnplugin` ZIPs. They own pricing, checkout, accounts, licenses, refunds,
-and access enforcement. Boring Notch supplies discovery, delivery, installation,
-and the native runtime; paid and free bundles use the same installation contract.
+This repository contains listing data, catalog tooling, and an API reference,
+not extension implementations or customer purchases. Publishers build, sign,
+notarize, and distribute their own `.bnplugin` ZIPs. They own pricing, checkout,
+accounts, licenses, refunds, and access enforcement. Boring Notch supplies
+discovery, delivery, installation, and the native runtime; paid and free bundles
+use the same installation contract.
+
+## Build an extension with a coding assistant
+
+Start with [LLM.txt](LLM.txt), which includes a ready-to-customize prompt and the
+reading order. [AGENTS.md](AGENTS.md) covers implementation conventions, native
+view ownership, live activities, regular/compact tabs, lifecycle cleanup, testing,
+packaging, and Store submission. The [API reference](docs/README.md) includes the
+exact C header and its provenance. These activities/tabs APIs are a **developer
+preview**; confirm a compatible host build before promising that an extension
+works in a released app.
 
 ## Register or update an extension
 
