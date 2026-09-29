@@ -1,0 +1,83 @@
+name: Build native plist catalog
+
+on:
+  pull_request:
+    paths:
+      - "extensions/**/*.plist"
+      - "catalog.plist"
+      - "scripts/catalog.py"
+      - "tests/**"
+      - ".github/workflows/catalog-plist.yml"
+  push:
+    branches: [main]
+    paths:
+      - "extensions/**/*.plist"
+      - "catalog.plist"
+      - "scripts/catalog.py"
+      - "tests/**"
+      - ".github/workflows/catalog-plist.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: native-catalog-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python3 -m unittest discover -s tests -v
+      - name: Validate records and generate review artifact
+        run: python3 scripts/catalog.py --output "$RUNNER_TEMP/catalog.plist"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: native-extension-catalog
+          path: ${{ runner.temp }}/catalog.plist
+
+  publish-aggregate:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: validate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate and publish one exact main revision
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            # This disposable Actions checkout may contain the previous failed
+            # attempt's generated files. Never run this cleanup in a developer
+            # checkout. Test, generate, and commit against the same fresh SHA.
+            git fetch --no-tags origin main
+            git checkout --detach --force FETCH_HEAD
+            git clean -fdx
+            python3 -m unittest discover -s tests -v
+            python3 scripts/catalog.py
+            git add -- catalog.plist
+            if git diff --cached --quiet; then
+              echo "Catalog is current for the freshly validated main revision."
+              exit 0
+            fi
+            git commit -m "Regenerate native extension catalog"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Publication attempt ${attempt}/3 was rejected; retrying from current main." >&2
+          done
+          echo "Catalog publication failed after 3 attempts. No force push was attempted; rerun after resolving the rejection." >&2
+          exit 1

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>artwork</key>
+	<string>assets/extensions/now-playing-preview.svg</string>
+	<key>artworkAlt</key>
+	<string>Illustration of a compact Now Playing panel with a track title and a playback button.</string>
+	<key>categories</key>
+	<array>
+		<string>Developer tools</string>
+		<string>Music</string>
+	</array>
+	<key>description</key>
+	<string>A free, open-source starter for extension developers. Show the current track, control playback, and learn how to give your extension its own settings. Build it locally to explore the public extension API.</string>
+	<key>developer</key>
+	<dict>
+		<key>name</key>
+		<string>TheBoredTeam</string>
+		<key>url</key>
+		<string>https://github.com/TheBoredTeam</string>
+	</dict>
+	<key>featured</key>
+	<false/>
+	<key>features</key>
+	<array>
+		<dict>
+			<key>description</key>
+			<string>A complete example with a settings view, media updates, and a playback command.</string>
+			<key>title</key>
+			<string>Start with something working</string>
+		</dict>
+		<dict>
+			<key>description</key>
+			<string>Use the documented C API to create your own free or paid extension. Each developer manages their own distribution and access.</string>
+			<key>title</key>
+			<string>Make it your own</string>
+		</dict>
+	</array>
+	<key>icon</key>
+	<string>assets/extensions/now-playing.svg</string>
+	<key>id</key>
+	<string>com.example.boringnotch.now-playing</string>
+	<key>installSteps</key>
+	<array>
+		<string>Open the source and follow the included README.</string>
+		<string>Build the example and run the supplied smoke test.</string>
+		<string>Launch a compatible Debug Boring Notch build with development extensions enabled.</string>
+		<string>Open Settings → Extensions to try the example. Development builds are not intended for general distribution.</string>
+	</array>
+	<key>name</key>
+	<string>Now Playing Example</string>
+	<key>price</key>
+	<dict>
+		<key>amount</key>
+		<integer>0</integer>
+		<key>billing</key>
+		<string>free</string>
+		<key>currency</key>
+		<string>USD</string>
+	</dict>
+	<key>privacy</key>
+	<string>The example receives track title, artist, and playback state from Boring Notch. It does not use a license service or request artwork.</string>
+	<key>requirements</key>
+	<array>
+		<string>macOS 14 or later</string>
+		<string>Xcode command-line tools</string>
+		<string>A Debug Boring Notch build from the extension-host preview branch</string>
+	</array>
+	<key>schemaVersion</key>
+	<integer>1</integer>
+	<key>slug</key>
+	<string>now-playing-example</string>
+	<key>sourceUrl</key>
+	<string>https://github.com/TheBoredTeam/boring.notch/tree/e4ca1a8ba000b95cda742cf74c5c2bfa656af4fd/examples/now-playing-extension</string>
+	<key>status</key>
+	<string>preview</string>
+	<key>statusNote</key>
+	<string>Developer preview. Source code is available now; this is an example to build with Xcode, not a signed download for everyday use.</string>
+	<key>supportUrl</key>
+	<string>https://github.com/TheBoredTeam/boring.notch/issues</string>
+	<key>tagline</key>
+	<string>A small beginning for your next big idea.</string>
+	<key>version</key>
+	<string>API v1 preview</string>
+</dict>
+</plist>

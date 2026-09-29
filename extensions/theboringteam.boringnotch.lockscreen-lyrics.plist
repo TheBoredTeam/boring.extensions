@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>artwork</key>
+	<string>assets/extensions/lock-screen-preview.svg</string>
+	<key>artworkAlt</key>
+	<string>Illustration of a dark Mac lock screen with a small notch and original sample lyrics. Product preview, not a screenshot.</string>
+	<key>categories</key>
+	<array>
+		<string>Music</string>
+		<string>Productivity</string>
+	</array>
+	<key>description</key>
+	<string>Give your lock screen a little more life. Follow your music with synced lyrics, settle into a Focus session, or keep the next thing in view with Glance. One extension. One permanent unlock.</string>
+	<key>developer</key>
+	<dict>
+		<key>name</key>
+		<string>TheBoredTeam</string>
+		<key>url</key>
+		<string>https://github.com/TheBoredTeam</string>
+	</dict>
+	<key>featured</key>
+	<true/>
+	<key>features</key>
+	<array>
+		<dict>
+			<key>description</key>
+			<string>Synced lyrics, album artwork, and a minimal player. Word highlighting is available for tracks with community word timings.</string>
+			<key>title</key>
+			<string>Stay in the song</string>
+		</dict>
+		<dict>
+			<key>description</key>
+			<string>Keep a Focus session in view with a quiet timer and optional break reminders.</string>
+			<key>title</key>
+			<string>Find your focus</string>
+		</dict>
+		<dict>
+			<key>description</key>
+			<string>See useful details and optionally your next calendar event, without unlocking your Mac.</string>
+			<key>title</key>
+			<string>A glance is enough</string>
+		</dict>
+		<dict>
+			<key>description</key>
+			<string>Music, Focus, and Glance are all included for $1, once. No subscription or separate mode purchases.</string>
+			<key>title</key>
+			<string>One small purchase</string>
+		</dict>
+	</array>
+	<key>heroTitle</key>
+	<string>Good things happen
+even on pause.</string>
+	<key>icon</key>
+	<string>assets/extensions/lock-screen.svg</string>
+	<key>id</key>
+	<string>theboringteam.boringnotch.lockscreen-lyrics</string>
+	<key>installSteps</key>
+	<array>
+		<string>Wait for the compatible Boring Notch release and signed extension package.</string>
+		<string>Purchase the extension, then download its .bnplugin package from the publisher.</string>
+		<string>In Boring Notch, open Settings → Extensions → Install extension and review the publisher.</string>
+		<string>Open Lock Screen's settings and activate your license code. One unlock includes all three modes.</string>
+	</array>
+	<key>name</key>
+	<string>Lock Screen</string>
+	<key>previews</key>
+	<array>
+		<dict>
+			<key>alt</key>
+			<string>Illustration of a dark Mac lock screen with a small notch and original sample lyrics. Product preview, not a screenshot.</string>
+			<key>caption</key>
+			<string>Design preview · Stay in the song</string>
+			<key>image</key>
+			<string>assets/extensions/lock-screen-preview.svg</string>
+		</dict>
+		<dict>
+			<key>alt</key>
+			<string>Design illustration of a quiet Focus timer and an optional sample calendar event on a green landscape.</string>
+			<key>caption</key>
+			<string>Design preview · Focus and Glance, included</string>
+			<key>image</key>
+			<string>assets/extensions/lock-screen-focus.svg</string>
+		</dict>
+	</array>
+	<key>price</key>
+	<dict>
+		<key>amount</key>
+		<integer>1</integer>
+		<key>billing</key>
+		<string>one-time</string>
+		<key>currency</key>
+		<string>USD</string>
+	</dict>
+	<key>privacy</key>
+	<string>Lyrics lookup sends track metadata to LRCLIB, Apple's public music catalog, and the AMLL community database. Calendar details and notifications are optional. Anything shown on your lock screen can be seen by people nearby.</string>
+	<key>purchaseUrl</key>
+	<string>https://buymeacoffee.com/jfxh67wvfxq/e/580376</string>
+	<key>requirements</key>
+	<array>
+		<string>macOS 14 or later</string>
+		<string>Boring Notch with extension support (upcoming release)</string>
+		<string>The Lock Screen extension installed and activated</string>
+	</array>
+	<key>schemaVersion</key>
+	<integer>1</integer>
+	<key>slug</key>
+	<string>lock-screen</string>
+	<key>status</key>
+	<string>coming-soon</string>
+	<key>statusNote</key>
+	<string>In development. The signed extension and a compatible Boring Notch release are not available yet. Purchasing will open here when they're ready.</string>
+	<key>supportUrl</key>
+	<string>https://discord.com/invite/HznxBpnJmQ</string>
+	<key>tagline</key>
+	<string>Your music. Your focus. Even while you're away.</string>
+	<key>version</key>
+	<string>1.0 preview</string>
+</dict>
+</plist>

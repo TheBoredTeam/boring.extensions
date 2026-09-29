@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>extensions</key>
+	<array>
+		<dict>
+			<key>artwork</key>
+			<string>assets/extensions/now-playing-preview.svg</string>
+			<key>artworkAlt</key>
+			<string>Illustration of a compact Now Playing panel with a track title and a playback button.</string>
+			<key>categories</key>
+			<array>
+				<string>Developer tools</string>
+				<string>Music</string>
+			</array>
+			<key>description</key>
+			<string>A free, open-source starter for extension developers. Show the current track, control playback, and learn how to give your extension its own settings. Build it locally to explore the public extension API.</string>
+			<key>developer</key>
+			<dict>
+				<key>name</key>
+				<string>TheBoredTeam</string>
+				<key>url</key>
+				<string>https://github.com/TheBoredTeam</string>
+			</dict>
+			<key>featured</key>
+			<false/>
+			<key>features</key>
+			<array>
+				<dict>
+					<key>description</key>
+					<string>A complete example with a settings view, media updates, and a playback command.</string>
+					<key>title</key>
+					<string>Start with something working</string>
+				</dict>
+				<dict>
+					<key>description</key>
+					<string>Use the documented C API to create your own free or paid extension. Each developer manages their own distribution and access.</string>
+					<key>title</key>
+					<string>Make it your own</string>
+				</dict>
+			</array>
+			<key>icon</key>
+			<string>assets/extensions/now-playing.svg</string>
+			<key>id</key>
+			<string>com.example.boringnotch.now-playing</string>
+			<key>installSteps</key>
+			<array>
+				<string>Open the source and follow the included README.</string>
+				<string>Build the example and run the supplied smoke test.</string>
+				<string>Launch a compatible Debug Boring Notch build with development extensions enabled.</string>
+				<string>Open Settings → Extensions to try the example. Development builds are not intended for general distribution.</string>
+			</array>
+			<key>name</key>
+			<string>Now Playing Example</string>
+			<key>price</key>
+			<dict>
+				<key>amount</key>
+				<integer>0</integer>
+				<key>billing</key>
+				<string>free</string>
+				<key>currency</key>
+				<string>USD</string>
+			</dict>
+			<key>privacy</key>
+			<string>The example receives track title, artist, and playback state from Boring Notch. It does not use a license service or request artwork.</string>
+			<key>requirements</key>
+			<array>
+				<string>macOS 14 or later</string>
+				<string>Xcode command-line tools</string>
+				<string>A Debug Boring Notch build from the extension-host preview branch</string>
+			</array>
+			<key>slug</key>
+			<string>now-playing-example</string>
+			<key>sourceUrl</key>
+			<string>https://github.com/TheBoredTeam/boring.notch/tree/e4ca1a8ba000b95cda742cf74c5c2bfa656af4fd/examples/now-playing-extension</string>
+			<key>status</key>
+			<string>preview</string>
+			<key>statusNote</key>
+			<string>Developer preview. Source code is available now; this is an example to build with Xcode, not a signed download for everyday use.</string>
+			<key>supportUrl</key>
+			<string>https://github.com/TheBoredTeam/boring.notch/issues</string>
+			<key>tagline</key>
+			<string>A small beginning for your next big idea.</string>
+			<key>version</key>
+			<string>API v1 preview</string>
+		</dict>
+		<dict>
+			<key>artwork</key>
+			<string>assets/extensions/lock-screen-preview.svg</string>
+			<key>artworkAlt</key>
+			<string>Illustration of a dark Mac lock screen with a small notch and original sample lyrics. Product preview, not a screenshot.</string>
+			<key>categories</key>
+			<array>
+				<string>Music</string>
+				<string>Productivity</string>
+			</array>
+			<key>description</key>
+			<string>Give your lock screen a little more life. Follow your music with synced lyrics, settle into a Focus session, or keep the next thing in view with Glance. One extension. One permanent unlock.</string>
+			<key>developer</key>
+			<dict>
+				<key>name</key>
+				<string>TheBoredTeam</string>
+				<key>url</key>
+				<string>https://github.com/TheBoredTeam</string>
+			</dict>
+			<key>featured</key>
+			<true/>
+			<key>features</key>
+			<array>
+				<dict>
+					<key>description</key>
+					<string>Synced lyrics, album artwork, and a minimal player. Word highlighting is available for tracks with community word timings.</string>
+					<key>title</key>
+					<string>Stay in the song</string>
+				</dict>
+				<dict>
+					<key>description</key>
+					<string>Keep a Focus session in view with a quiet timer and optional break reminders.</string>
+					<key>title</key>
+					<string>Find your focus</string>
+				</dict>
+				<dict>
+					<key>description</key>
+					<string>See useful details and optionally your next calendar event, without unlocking your Mac.</string>
+					<key>title</key>
+					<string>A glance is enough</string>
+				</dict>
+				<dict>
+					<key>description</key>
+					<string>Music, Focus, and Glance are all included for $1, once. No subscription or separate mode purchases.</string>
+					<key>title</key>
+					<string>One small purchase</string>
+				</dict>
+			</array>
+			<key>heroTitle</key>
+			<string>Good things happen
+even on pause.</string>
+			<key>icon</key>
+			<string>assets/extensions/lock-screen.svg</string>
+			<key>id</key>
+			<string>theboringteam.boringnotch.lockscreen-lyrics</string>
+			<key>installSteps</key>
+			<array>
+				<string>Wait for the compatible Boring Notch release and signed extension package.</string>
+				<string>Purchase the extension, then download its .bnplugin package from the publisher.</string>
+				<string>In Boring Notch, open Settings → Extensions → Install extension and review the publisher.</string>
+				<string>Open Lock Screen's settings and activate your license code. One unlock includes all three modes.</string>
+			</array>
+			<key>name</key>
+			<string>Lock Screen</string>
+			<key>previews</key>
+			<array>
+				<dict>
+					<key>alt</key>
+					<string>Illustration of a dark Mac lock screen with a small notch and original sample lyrics. Product preview, not a screenshot.</string>
+					<key>caption</key>
+					<string>Design preview · Stay in the song</string>
+					<key>image</key>
+					<string>assets/extensions/lock-screen-preview.svg</string>
+				</dict>
+				<dict>
+					<key>alt</key>
+					<string>Design illustration of a quiet Focus timer and an optional sample calendar event on a green landscape.</string>
+					<key>caption</key>
+					<string>Design preview · Focus and Glance, included</string>
+					<key>image</key>
+					<string>assets/extensions/lock-screen-focus.svg</string>
+				</dict>
+			</array>
+			<key>price</key>
+			<dict>
+				<key>amount</key>
+				<integer>1</integer>
+				<key>billing</key>
+				<string>one-time</string>
+				<key>currency</key>
+				<string>USD</string>
+			</dict>
+			<key>privacy</key>
+			<string>Lyrics lookup sends track metadata to LRCLIB, Apple's public music catalog, and the AMLL community database. Calendar details and notifications are optional. Anything shown on your lock screen can be seen by people nearby.</string>
+			<key>purchaseUrl</key>
+			<string>https://buymeacoffee.com/jfxh67wvfxq/e/580376</string>
+			<key>requirements</key>
+			<array>
+				<string>macOS 14 or later</string>
+				<string>Boring Notch with extension support (upcoming release)</string>
+				<string>The Lock Screen extension installed and activated</string>
+			</array>
+			<key>slug</key>
+			<string>lock-screen</string>
+			<key>status</key>
+			<string>coming-soon</string>
+			<key>statusNote</key>
+			<string>In development. The signed extension and a compatible Boring Notch release are not available yet. Purchasing will open here when they're ready.</string>
+			<key>supportUrl</key>
+			<string>https://discord.com/invite/HznxBpnJmQ</string>
+			<key>tagline</key>
+			<string>Your music. Your focus. Even while you're away.</string>
+			<key>version</key>
+			<string>1.0 preview</string>
+		</dict>
+	</array>
+	<key>schemaVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>
