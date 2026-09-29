@@ -83,5 +83,7 @@
 	<string>A small beginning for your next big idea.</string>
 	<key>version</key>
 	<string>API v1 preview</string>
+	<key>websiteUrl</key>
+	<string>https://theboring.name/extensions/?extension=now-playing-example</string>
 </dict>
 </plist>

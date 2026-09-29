@@ -117,5 +117,7 @@ even on pause.</string>
 	<string>Your music. Your focus. Even while you're away.</string>
 	<key>version</key>
 	<string>1.0 preview</string>
+	<key>websiteUrl</key>
+	<string>https://theboring.name/extensions/?extension=lock-screen</string>
 </dict>
 </plist>

@@ -168,13 +168,20 @@ class CatalogTests(unittest.TestCase):
 
     def test_optional_publisher_product_fields_survive_generation(self):
         item = listing()
-        item.update({"purchaseUrl": "https://example.org/buy", "privacy": "Publisher-owned terms.",
+        item.update({"websiteUrl": "https://example.org/focus", "purchaseUrl": "https://example.org/buy", "privacy": "Publisher-owned terms.",
                      "features": [{"title": "One", "description": "Two"}], "featured": True})
         self.write(item)
         result = plistlib.loads(catalog.generate(self.directory))["extensions"][0]
+        self.assertEqual(result["websiteUrl"], item["websiteUrl"])
         self.assertEqual(result["purchaseUrl"], item["purchaseUrl"])
         self.assertEqual(result["features"], item["features"])
         self.assertTrue(result["featured"])
+
+    def test_optional_product_website_requires_safe_https(self):
+        for url in ["http://example.org/focus", "https://user:secret@example.org/focus",
+                    "https://example.org:abc/focus", "https://exa\\mple.org/focus"]:
+            with self.subTest(url=url), self.assertRaisesRegex(catalog.CatalogError, "websiteUrl"):
+                catalog.validate_item(listing() | {"websiteUrl": url}, "org.example.focus.plist")
 
 
 if __name__ == "__main__":

@@ -64,6 +64,7 @@ Records are sorted by manifest ID, and output bytes are deterministic.
 | `status` | `coming-soon`, `preview`, or `available`. Only available records with valid artifacts offer installation. |
 | `version` | Exact bundle version for available releases; an honest preview label for unreleased products. |
 | `statusNote` | Optional explanation of current release readiness. |
+| `websiteUrl` | Optional public HTTPS product page for “View on website”. Without it the app uses `developer.url`; it never invents a website page from the slug. |
 | `sourceUrl`, `supportUrl`, `purchaseUrl` | Optional public HTTPS destinations. Payments remain with the developer. |
 | `icon`, `artwork` | Optional public HTTPS images. Existing `assets/extensions/...` website paths remain supported. |
 | `artifact` | Required for `available`; see the release record below. |

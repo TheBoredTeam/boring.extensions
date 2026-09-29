@@ -121,7 +121,7 @@ def validate_item(item: object, filename: str) -> dict:
     require(isinstance(item.get("status"), str) and item["status"] in {"coming-soon", "preview", "available"}, "unknown listing status")
     if "statusNote" in item:
         require(text(item["statusNote"], 4_096), "invalid statusNote")
-    for key in ["sourceUrl", "supportUrl", "purchaseUrl", "downloadUrl"]:
+    for key in ["websiteUrl", "sourceUrl", "supportUrl", "purchaseUrl", "downloadUrl"]:
         if key in item:
             require(https(item[key]), f"{key} must be a public HTTPS URL")
     for key in ["icon", "artwork"]:
