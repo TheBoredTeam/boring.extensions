@@ -1,46 +1,11 @@
-# Build a Boring Notch extension with an AI coding assistant
+# Boring Notch extension authoring has moved
 
-Boring Notch extensions are independently built native macOS .bnplugin bundles.
-They can provide collapsed live activities, native tabs, and extension settings.
-Their code, UI, state, services, and optional licensing stay in their own project.
-Users install a ZIP through Settings > Extensions. This repository distributes
-reviewed Store metadata; it does not compile extensions into Boring Notch.
+Read the canonical starting guide:
+https://raw.githubusercontent.com/TheBoredTeam/boring-notch-extensions/main/LLM.txt
 
-Read these documents before generating code, in this order:
+Then read the implementation instructions:
+https://raw.githubusercontent.com/TheBoredTeam/boring-notch-extensions/main/AGENTS.md
 
-1. AGENTS.md — implementation workflow, conventions, ownership, layouts,
-   lifecycle, testing, packaging, and the completion checklist.
-   https://github.com/TheBoredTeam/boring.extensions/blob/main/AGENTS.md
-2. docs/README.md — exact API snapshot provenance and preview compatibility.
-   https://github.com/TheBoredTeam/boring.extensions/blob/main/docs/README.md
-3. docs/extension-api.h — C entry points, pointer lifetimes, and wire contracts.
-   https://github.com/TheBoredTeam/boring.extensions/blob/main/docs/extension-api.h
-4. README.md — Store plist schema and reviewed release submission process.
-   https://github.com/TheBoredTeam/boring.extensions/blob/main/README.md
-
-For plain-text retrieval, replace the GitHub /blob/main/ prefix with:
-https://raw.githubusercontent.com/TheBoredTeam/boring.extensions/main/
-
-Compatibility: the activities/tabs contract is a developer preview, not a promise
-that a released Boring Notch app supports it. Verify the target host's actual
-API before testing. The manifest remains apiVersion 1; tab_view_v2 is an additive
-factory, not manifest API version 2. Do not invent host commands or SDK packages.
-
-Copy this prompt into your coding assistant and replace the bracketed parts:
-
-"Read TheBoredTeam/boring.extensions/LLM.txt and all four linked references.
-Build [describe the extension and its main user interaction] in a separate
-extension project. Use [publisher-owned reverse-domain identifier] and target
-[the compatible Boring Notch build or checkout available to me]. Provide
-[a live activity, a native tab, or both], with [regular only, or intentional
-regular and compact layouts]. Keep business logic in one extension-owned model
-and use the documented C ABI. Create the source, manifest, Info.plist, standalone
-build/package script, lifecycle/rendering smoke tests, and a README. Use local
-development signing until real release credentials are configured. Validate what
-you can, identify anything untested, and leave the Store listing in preview until
-an actual signed, notarized ZIP and its release metadata exist. Payments, if any,
-belong to my extension and service. Do not modify the host to embed my extension."
-
-An unavailable compatible host does not prevent creating source and local tests.
-It does prevent claiming installation or live integration was verified. Report
-that limitation explicitly and request the target build only when needed.
+Store records now use TOML in TheBoredTeam/boring-notch-extensions; CI generates
+catalog.json for the host. This repository's catalog.plist is a frozen
+compatibility feed. Do not generate new Store submissions here.
